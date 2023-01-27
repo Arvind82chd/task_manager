@@ -21,7 +21,7 @@
       <td><%= task.category&.name || '-' %></td>
       <td class="actions">
         <%= link_to("Show", task_path(task), class: 'action show') %>
-        <%= link_to("Edit", '#', class: 'action edit') %>
+        <%= link_to("Edit", edit_task_path(task), class: 'action edit') %>
         <%= link_to("Delete", '#', class: 'action delete') %>
       </td>
     </tr>
@@ -29,15 +29,3 @@
   </table>
 </div>
 
-# <h1>Tasks#index</h1>
-
-# <% if @page == 1 %>
-#   <h2>Task List</h2>
-# <% end %>
-
-# <ul>
-# <% @tasks.each do |task| %>
-#     <li><%=  task %></li>
-# <% end %>
-# </ul>
-<p>Find me in app/views/tasks/index.html.erb</p>
