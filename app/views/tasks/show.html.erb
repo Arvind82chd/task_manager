@@ -1,0 +1,36 @@
+<%= link_to("Back to List", tasks_path, class: 'back-link') %>
+
+<div class="actions">
+  <%= link_to('Edit', '#') %>
+  <%= link_to('Delete', '#') %>
+</div>
+
+<table class="actions">
+  <tr>
+    <th>Name</th>
+    <td><%= @task.name %></td>
+  </tr>
+  <tr>
+    <th>Position</th>
+    <td><%= @task.position %></td>
+  </tr>
+  <tr>
+    <th>Completed</th>
+    <td><%= @task.completed? ? 'Yes' : 'No' %></td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><%= @task.description %></td>
+  </tr>
+  <tr>
+    <th>Category</th>
+    <td><%= @task.category %></td>
+  </tr>
+  <tr>
+    <th>Action</th>
+    <td><%= link_to("Show", task_path(params[:id])) %></td>
+  </tr>
+</table>
+</div>
+
+
